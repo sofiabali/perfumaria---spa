@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Perfumaria Aroma - SPA</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fdf6f0, #fbe9e7);
+      color: #5a3e36;
+      line-height: 1.75;
+      padding: 30px 20px;
+      font-size: 1.1rem;
+    }
+
+    header {
+      background: linear-gradient(90deg, #d6a77a, #f4c9b1);
+      padding: 35px 20px;
+      text-align: center;
+      border-radius: 18px;
+      margin-bottom: 35px;
+      box-shadow: 0 6px 20px rgba(214, 167, 122, 0.5);
+      color: #5a3e36;
+      letter-spacing: 2px;
+      font-style: italic;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.6);
+      margin-bottom: 15px;
+      font-family: 'Brush Script MT', cursive;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav button {
+      background-color: #d6a77a;
+      border: 2px solid #af6b48;
+      color: #fff9f4;
+      font-family: 'Georgia', serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 12px 28px;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(175, 107, 72, 0.5);
+      transition: background-color 0.4s ease, transform 0.3s ease;
+      letter-spacing: 0.06em;
+      margin: 0 8px;
+    }
+
+    nav button:hover {
+      background-color: #af6b48;
+      box-shadow: 0 10px 30px rgba(175, 107, 72, 0.7);
+      transform: scale(1.05);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      min-height: 400px;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      color: #af6b48;
+      margin-bottom: 30px;
+      font-weight: 900;
+      font-family: 'Lucida Calligraphy', cursive;
+      text-transform: capitalize;
+      letter-spacing: 3px;
+      text-shadow: 1px 1px 4px rgba(171, 107, 72, 0.3);
+    }
+
+    
+    ul.produtos-lista {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    ul.produtos-lista li {
+      background-color: #fff6f2;
+      border-radius: 18px;
+      padding: 25px 30px;
+      margin: 18px 0;
+      box-shadow: 0 8px 25px rgba(189, 144, 119, 0.25);
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #7a523a;
+      transition: background-color 0.3s ease;
+      border: 1px solid #e7cfc2;
+      cursor: default;
+      position: relative;
+    }
+
+    ul.produtos-lista li:hover {
+      background-color: #f4dcd0;
+      border-color: #d6a77a;
+      box-shadow: 0 12px 35px rgba(214, 167, 122, 0.5);
+    }
+
+    .preco {
+      display: inline-block;
+      margin-top: 12px;
+      font-weight: 900;
+      color: #af6b48;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      font-family: 'Georgia', serif;
+    }
+
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-width: 520px;
+      margin: 0 auto;
+      background: #fff6f2;
+      padding: 30px 35px;
+      border-radius: 25px;
+      box-shadow: 0 12px 40px rgba(189, 144, 119, 0.25);
+      text-align: left;
+      font-family: 'Georgia', serif;
+    }
+
+    label {
+      font-weight: 700;
+      color: #8b5c3e;
+      letter-spacing: 0.05em;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 1.1rem;
+    }
+
+    input, select, textarea {
+      padding: 13px 18px;
+      border-radius: 15px;
+      border: 2px solid #d6a77a;
+      font-size: 1.1rem;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+      font-family: 'Georgia', serif;
+      color: #5a3e36;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #af6b48;
+      box-shadow: 0 0 10px rgba(175, 107, 72, 0.6);
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    button[type="submit"] {
+      background: #af6b48;
+      color: #fff9f4;
+      border: none;
+      padding: 16px 0;
+      border-radius: 40px;
+      cursor: pointer;
+      font-weight: 900;
+      font-size: 1.3rem;
+      letter-spacing: 0.08em;
+      box-shadow: 0 10px 28px rgba(175, 107, 72, 0.5);
+      transition: background 0.4s ease, transform 0.3s ease;
+      font-family: 'Georgia', serif;
+      width: 100%;
+      max-width: 200px;
+      margin: auto;
+      display: block;
+    }
+
+    button[type="submit"]:hover {
+      background: #d6a77a;
+      color: #5a3e36;
+      transform: scale(1.07);
+      box-shadow: 0 14px 38px rgba(214, 167, 122, 0.7);
+    }
+
+    footer {
+      background: linear-gradient(90deg, #f4c9b1, #d6a77a);
+      padding: 25px 20px;
+      text-align: center;
+      border-radius: 25px 25px 0 0;
+      color: #5a3e36;
+      font-weight: 700;
+      box-shadow: 0 -8px 22px rgba(214, 167, 122, 0.5);
+      margin-top: 50px;
+      font-size: 1rem;
+      letter-spacing: 0.07em;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Perfumaria Aroma</h1>
+  <nav>
+    <button id="btn-home">Home</button>
+    <button id="btn-produtos">Produtos</button>
+    <button id="btn-contato">Contato</button>
+  </nav>
+</header>
+
+<main id="conteudo">
+  <h2>Bem-vindo à Perfumaria Aroma!</h2>
+  <p>Descubra nossos perfumes exclusivos.</p>
+</main>
+
+<footer>
+  &copy; 2025 Perfumaria Aroma. Todos os direitos reservados.
+</footer>
+
+<script>
+  
+  function carregarHome() {
+    const main = document.getElementById('conteudo');
+    main.innerHTML = `
+      <h2>Bem-vindo à Perfumaria Aroma!</h2>
+      <p>Descubra nossos perfumes exclusivos.</p>
+    `;
+  }
+
+  
+  function carregarProdutos() {
+    const main = document.getElementById('conteudo');
+    const produtos = [
+      { nome: "Essência Floral", descricao: "Perfume leve com notas de jasmim e rosas. Perfeito para o dia a dia.", preco: 120 },
+      { nome: "Ambar Nocturne", descricao: "Aroma sofisticado com toque ambarado e baunilha. Ideal para a noite.", preco: 180 },
+      { nome: "Verde Frescor", descricao: "Fragrância refrescante com notas de menta e limão, energizante.", preco: 95 },
+      { nome: "Madeira Elegante", descricao: "Perfume marcante com essência de cedro e sândalo, clássica.", preco: 150 }
+    ];
+
+    let html = '<h2>Nosso Catálogo de Perfumes</h2><ul class="produtos-lista">';
+    produtos.forEach(prod => {
+      html += `
+      <li>
+        <strong>${prod.nome}</strong><br/>
+        ${prod.descricao}<br/>
+        <span class="preco">R$ ${prod.preco.toFixed(2)}</span>
+      </li>`;
+    });
+    html += '</ul>';
+    main.innerHTML = html;
+  }
+
+  
+  function carregarContato() {
+    const main = document.getElementById('conteudo');
+    main.innerHTML = `
+      <h2>Contato</h2>
+      <form>
+        <label>
+          Nome:
+          <input type="text" name="nome" placeholder="Seu nome" required />
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" placeholder="seu@email.com" required />
+        </label>
+        <label>
+          Assunto:
+          <select name="assunto" required>
+            <option value="" disabled selected>Selecione um assunto</option>
+            <option value="consulta">Consulta</option>
+            <option value="orcamento">Orçamento</option>
+            <option value="outros">Outros</option>
+          </select>
+        </label>
+        <label>
+          Mensagem:
+          <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+        </label>
+        <button type="submit">Enviar Mensagem</button>
+      </form>
+    `;
+  }
+
+  
+  document.getElementById('btn-home').addEventListener('click', carregarHome);
+  document.getElementById('btn-produtos').addEventListener('click', carregarProdutos);
+  document.getElementById('btn-contato').addEventListener('click', carregarContato);
+
+ 
+  carregarHome();
+</script>
+
+</body>
+</html>
